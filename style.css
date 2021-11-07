@@ -1,8 +1,13 @@
+body{
+    margin:auto 0;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
 .zone {
-    padding:30px 50px;
-    margin:40px 60px;
-    cursor:pointer;
-    display:inline-block;
+    /* padding:30px 50px;
+    margin:40px 60px; */
+    cursor:pointer; 
+    /* display:inline-block; */
     color:#FFF;
     font-size:2em;
     border-radius:4px;
@@ -16,7 +21,12 @@
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
-
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-box-shadow:rotate(-7deg);
+    -o-box-shadow:rotate(-7deg);
+    box-shadow:rotate(-7deg);
+}
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
  *  Green Background
@@ -37,8 +47,9 @@
 .red{
     background: #C655BE; /* Old browsers */
     background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); Chrome,Safari4+ */
+    /* background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */ 
+    background-color: white;
     background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
     background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
@@ -68,4 +79,74 @@
     background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+/* Nav */
+.main-nav{
+    display: flex;
+    list-style: none;
+    font-size: 0,7em;
+    margin:0;
+}
+
+@media screen and (max-width:600px){
+    .main-nav{
+        font-size: 0.5em;
+        padding:0;
+    }
+    .cover{
+        width: 30rem;
+        margin-top:20px;
+    }
+}
+
+li{
+    padding: 20px;
+}
+a{
+    color:aquamarine;
+    text-decoration: none;
+}
+.push{
+    margin-left:auto;
+}
+
+.sticky{
+    position:fixed;
+    width: 100%;
+    top:0;
+}
+/* Cover zone */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70vh;
+    background-color: white;
+
+}
+.cover{
+    width: 20rem;
+    margin-top:56px;
+}
+
+/* Grid */
+.grid-wrapper{
+display: grid;
+grid-gap:20px;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+}
+
+.box > img{
+    width:100%;
+}
+.box{
+    background-color: #444;
+    padding: 130px;
+    margin:20px
+}
+
+/* Footer */
+footer{
+    text-align: center;
 }
